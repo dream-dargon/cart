@@ -9,7 +9,7 @@ class index extends Component {
     data : PropTypes.string
   }
   onBack = () => {
-    this.props.history.push("../")
+    this.props.history.go(-1)
   }
   render() {
     return (

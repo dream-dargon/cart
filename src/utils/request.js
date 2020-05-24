@@ -39,21 +39,31 @@ axios.interceptors.response.use(response => {
 
 
 // post
-export function post (url, data) {
-  return new Promise((resolve, reject) => {
-    axios({
-      url,
-      method: 'POST',
-      // 添加公共的请求头
-      // headers: { token: '3333333333333' },
-      headers:{'Content-Type':"application/x-www-form-urlencoded"},
-      data: qs.stringify(data),
-    })
-      .then(res => resolve(res.data))
-      .catch(err => console.log(err))
+// export function post (url, data) {
+//   return  new Promise((resolve, reject) => {
+  // axios({
+  //     url,
+  //     method: 'POST',
+  //     // 添加公共的请求头
+  //     // headers: { token: '3333333333333' },
+  //     headers:{'Content-Type':"application/x-www-form-urlencoded"},
+  //     data: qs.stringify(data),
+  //   })
+//       .then(res => resolve(res.data))
+//       .catch(err => console.log(err))
+//   })
+// }
+export async function post (url,data) {
+  const res= await  axios({
+    url,
+    method: 'POST',
+    // 添加公共的请求头
+    // headers: { token: '3333333333333' },
+    headers:{'Content-Type':"application/x-www-form-urlencoded"},
+    data: qs.stringify(data),
   })
+  return res.data
 }
-
 // get
 export function get (url, data = '') {
   return new Promise((resolve, reject) => {
