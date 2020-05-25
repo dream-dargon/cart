@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import './style.less'
 export default @connect(state => {
   return {
     navs : state.home.fiveNavs
