@@ -1,7 +1,5 @@
 import Loadable from '@@/Loadable'
 
-const App = Loadable(() =>
-    import ('@/pages/app'))
 const Home = Loadable(() =>
     import ('@/pages/home'))
 const Login = Loadable(() =>
@@ -15,7 +13,6 @@ const Mine = Loadable(() =>
 const Basic = Loadable(() =>
     import ('@/layout/Basic'))
 export {
-    App,
     Home,
     Login,
     Reg,

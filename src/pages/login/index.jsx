@@ -35,7 +35,7 @@ class index extends Component {
     })
    }
   }
-  //表单改变
+  //表单change事件
   inputChangeFn = (e, key) => { 
     this.setState({
         [key]: e.target.value.replace(/\s/g,"")//去除输入框中的空格
@@ -69,7 +69,7 @@ class index extends Component {
     const { check, cellphone, password} = this.state
     return (
       <div className="pages-login">
-         <Header name="登录" />
+         <Header name='登录' />
          <div className="login-content">
           <p className="login-inputs">
             <input type="text" 
@@ -94,8 +94,8 @@ class index extends Component {
             <button onClick={this.logins}>登录</button>
           </p>
           <p className="login-inputs login-in">
-          <span><IconFont type="icon-mima" />忘记密码</span>
-          <span onClick={this.jump}><IconFont type="icon-shouji" />快速注册</span>
+            <span><IconFont type="icon-mima" />忘记密码</span>
+            <span onClick={this.jump}><IconFont type="icon-shouji" />快速注册</span>
           </p>
          </div>
        </div>

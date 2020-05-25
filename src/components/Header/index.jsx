@@ -12,8 +12,7 @@ class index extends Component {
     this.props.history.go(-1)
   }
   render() {
-    return (
-      <header>
+    return ( <header>
         <div className="Head_left" onClick={this.onBack}>
         <img src={imgs} alt="" />
         </div>

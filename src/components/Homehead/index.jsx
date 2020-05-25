@@ -6,16 +6,16 @@ class index extends React.Component {
 
   render() {
     return (
-      <header>
-        <div className="Head_left" >
+      <div className='home_head'>
+        <div className="home_head_left" >
         <Icon type="bars" />
         </div>
-        <div className="Head_warp">
+        <div className="home_head_warp">
         <Icon type="search" id='icon_sear'/>
           <input placeholder='输入喜欢的宝贝名称'/>
         </div>
-        <div className="Head_right">登录</div>
-    </header>
+        <div className="home_head_right">登录</div>
+    </div>
     )
   }
 }
