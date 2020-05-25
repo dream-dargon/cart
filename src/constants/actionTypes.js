@@ -1,2 +1,3 @@
 
 export const FETCH_CART_LOGIN= "FETCH_CART_LOGIN"
+export const FETCH_REG= "FETCH_REG"
