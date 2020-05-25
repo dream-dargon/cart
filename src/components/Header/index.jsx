@@ -14,11 +14,11 @@ class index extends Component {
   render() {
     return (
       <header>
-      <div className="Head_left" onClick={this.onBack}>
-      <img src={imgs} alt="" />
-      </div>
-      <div className="Head_warp">{this.props.name}</div>
-      <div className="Head_right"></div>
+        <div className="Head_left" onClick={this.onBack}>
+        <img src={imgs} alt="" />
+        </div>
+        <div className="Head_warp">{this.props.name}</div>
+        <div className="Head_right"></div>
       </header>
     )
   }

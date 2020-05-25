@@ -1,14 +1,12 @@
 import React from 'react';
 import { Icon } from 'antd';
 import { Switch, Route, NavLink } from 'react-router-dom'
-import { Cart, Mine, Home } from '@/router/assembly';
+import {  Home } from '@/router/assembly';
 import './index.less'
 export default class Basic extends React.Component {
   render() {
     return <div className='layout-basic'>
        <Switch>
-        <Route path='/cart' component={Cart} />
-        <Route path='/mine' component={Mine} />
         <Route path="/" component={Home} />
       </Switch>
       <ul className='navs'>
