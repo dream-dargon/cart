@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import { Icon,Switch,message } from 'antd'
+import { Switch,message } from 'antd'
 import { connect } from 'react-redux'
 import Header from '@@/Header'
 import { loginInfo } from '@/actions/login'
+import { IconFont } from '@@/IconFont'
 import './style.less'
-const IconFont = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_1779452_fax72rsj5g.js',
-});
 message.config({
   top: 150,
   duration: 1,

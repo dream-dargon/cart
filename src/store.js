@@ -4,7 +4,7 @@ import thunk from "redux-thunk"
 import { persistReducer } from 'redux-persist' // 合并 reduce
 import storage from 'redux-persist/lib/storage' // 创建 store
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2'
-import { login, home, reg } from "@/reducer"
+import { login, home, reg, mine } from "@/reducer"
 const rootPersistConfig = {
     key: 'root',
     storage,
@@ -17,7 +17,8 @@ const myPersistReducer = persistReducer(
     combineReducers({
         login,
         home,
-        reg
+        mine,
+        reg,
     }))
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
