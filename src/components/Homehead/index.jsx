@@ -1,7 +1,8 @@
 import React from 'react';
-import { Icon } from 'antd'
 import { connect } from 'react-redux'
+import { Icon} from 'antd'
 import { withRouter } from 'react-router-dom'
+import { IconFont } from '@@/IconFont'
 import './style.less'
 export default @connect (state => {
   return {
@@ -19,6 +20,7 @@ class index extends React.Component {
     }
   }
   render() {
+    const { data } = this.props
     return (
       <div className='home_head'>
         <div className="home_head_left" >
@@ -28,7 +30,9 @@ class index extends React.Component {
         <Icon type="search" id='icon_sear'/>
           <input placeholder='输入喜欢的宝贝名称'/>
         </div>
-        <div className="home_head_right" onClick={this.tologin}>登录</div>
+        <div className="home_head_right" onClick={this.tologin}>
+        {data ? <IconFont type="icon-wode1" /> : '登录'}
+        </div>
     </div>
     )
   }

@@ -11,11 +11,18 @@ export default @connect(state => {
 })
 class index extends React.Component {
   componentDidMount() {
-    new Swiper('.swiper-container', {
+    new Swiper('.swiper-container',{
+      loop: true, 
+      autoplay: {
+          delay: 1000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          },
       pagination: {
-        el: '.swiper-pagination',
+          el: '.swiper-pagination',
+          clickable :true,
       },
-    });
+  });
 }
   render() {
     const { imgs } = this.props;
