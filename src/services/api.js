@@ -3,5 +3,6 @@ export default {
     swiperImgs: '/api/home/index/slide?token=1ec949a15fb709370f',
     fiveNavs: '/api/home/index/nav?token=1ec949a15fb709370f',
     reg: '/api/home/user/reg?token=1ec949a15fb709370f',
-    code: '/api/vcode/chkcode?token=1ec949a15fb709370f'
+    code: '/api/vcode/chkcode?token=1ec949a15fb709370f',
+    recomGoods: '/api/home/index/goodsLevel?token=1ec949a15fb709370f' //首页标题推荐
 }

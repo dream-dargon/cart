@@ -10,11 +10,19 @@ export default @connect(state => {
 })
 class index extends React.Component {
   componentDidMount() {
-    new Swiper('.swiper-container', {
+    new Swiper('.swiper-container',{
+      loop: true, 
+      autoplay: {
+          delay: 1000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          },
       pagination: {
-        el: '.swiper-pagination',
+          el: '.swiper-pagination',
+          clickable :true,
       },
-    });
+  });
+
 }
   render() {
     const { imgs } = this.props;
@@ -23,7 +31,7 @@ class index extends React.Component {
         <div className="swiper-wrapper">
           {
             imgs.map((v,i)=>{
-              return <div className="swiper-slide" key={i}><img src={v.image} /></div>
+              return <div className="swiper-slide" key={i}><img src={v.image} alt=''/></div>
             })
           }
         </div>
