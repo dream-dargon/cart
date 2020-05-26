@@ -23,6 +23,10 @@ class index extends React.Component {
           clickable :true,
       },
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6708b6c3a6fb9a5ceb479c8fba7e5720c16fd68b
 }
   render() {
     const { imgs } = this.props;
@@ -31,7 +35,11 @@ class index extends React.Component {
         <div className="swiper-wrapper">
           {
             imgs.map((v,i)=>{
+<<<<<<< HEAD
               return <div className="swiper-slide" key={i}><img src={v.image} alt="" /></div>
+=======
+              return <div className="swiper-slide" key={i}><img src={v.image} alt=''/></div>
+>>>>>>> 6708b6c3a6fb9a5ceb479c8fba7e5720c16fd68b
             })
           }
         </div>

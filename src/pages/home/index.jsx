@@ -4,17 +4,16 @@ import './styles.less'
 import Homehead from '@@/Homehead'
 import Swip from '@@/Swip'
 import Homenavs from '@@/Homenavs'
-import { getSwiper, getNavs } from '@/actions/home'
+import Threegoods from '@@/Threegoods'
+import { getSwiper} from '@/actions/home'
 export default @connect(state => {
   return {}
 }, {
-    getSwiper,
-    getNavs
+    getSwiper
 })
 class Home extends React.Component {
   componentDidMount() {
     this.props.getSwiper()
-    this.props.getNavs()
   }
   render () {
     return (
@@ -22,6 +21,7 @@ class Home extends React.Component {
         <Homehead />
         <Swip />
         <Homenavs />
+        <Threegoods />
       </div>
     )
   }

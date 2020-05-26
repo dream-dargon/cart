@@ -1,7 +1,8 @@
-import { GET_SWIPER_IMG, GET_HOME_NAVS } from '@/constants/actionTypes'
+import { GET_SWIPER_IMG, GET_HOME_NAVS, GET_HOME_RECOMMEND } from '@/constants/actionTypes'
 const initialState = {
     swiperImgs: [],
-    fiveNavs: []
+    fiveNavs: [],
+    recomGoods: []
 }
 
 export default (state = initialState, { type, payload }) => {
@@ -10,6 +11,8 @@ export default (state = initialState, { type, payload }) => {
             return {...state, swiperImgs: payload.data }
         case GET_HOME_NAVS:
             return {...state, fiveNavs: payload.data }
+        case GET_HOME_RECOMMEND:
+            return {...state, recomGoods: payload.data }
         default:
             return state
     }
