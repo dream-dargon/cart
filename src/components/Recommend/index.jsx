@@ -19,7 +19,7 @@ class Recommend extends Component {
         <div className="recommend-title">
           <div className='title-line'></div>
           <div className='title-text'>
-            <span><IconFont type="icon-xihuan" /></span>
+            <span><IconFont type="icon-xihuan" style={{'color': 'red'}} /></span>
             为您推荐
           </div>
           <div className='title-line'></div>

@@ -18,9 +18,11 @@ class index extends React.Component {
         disableOnInteraction: false,
       },
       pagination: {
-        el: '.swiper-pagination',
+          el: '.swiper-pagination',
+          clickable :true,
       },
-    });
+  });
+
 }
   render() {
     const { imgs } = this.props;

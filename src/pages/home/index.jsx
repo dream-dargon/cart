@@ -1,11 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import './styles.less'
 import Homehead from '@@/Homehead'
 import Swip from '@@/Swip'
 import Homenavs from '@@/Homenavs'
 import Recommend from '@@/Recommend'
+import Threegoods from '@@/Threegoods'
 import { getSwiper, getNavs, getRecommend } from '@/actions/home'
+import './styles.less'
+
+
 export default @connect(state => {
   return {}
 }, {
@@ -25,6 +28,7 @@ class Home extends React.Component {
         <Homehead />
         <Swip />
         <Homenavs />
+        <Threegoods />
         <Recommend />
       </div>
     )

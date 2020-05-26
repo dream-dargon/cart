@@ -1,13 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { getNavs } from '@/actions/home'
 import './style.less'
 export default @connect(state => {
   return {
     navs : state.home.fiveNavs
   }
+}, {
+  getNavs
 })
 class index extends React.Component {
- 
+  componentDidMount() {
+    this.props.getNavs()
+  }
   render() {
     const { navs } = this.props;
     return <div className='home_navs'>
