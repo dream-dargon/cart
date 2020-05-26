@@ -10,6 +10,19 @@ export default @connect (state => {
 })
 @withRouter
 class index extends React.Component {
+
+  componentDidMount () {
+    window.onscroll = () => {
+      if(document.documentElement.scrollTop > 100){
+        document.getElementsByClassName('home_head')[0]
+        .style.background = 'linear-gradient(red, white)';
+      }else{
+        document.getElementsByClassName('home_head')[0]
+        .style.background = 'none';
+      }
+    }
+  }
+
   tologin = () => {
     const { data } = this.props
     if( data ) {
@@ -18,6 +31,7 @@ class index extends React.Component {
       this.props.history.push('/login')
     }
   }
+
   render() {
     return (
       <div className='home_head'>

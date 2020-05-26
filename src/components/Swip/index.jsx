@@ -12,6 +12,11 @@ export default @connect(state => {
 class index extends React.Component {
   componentDidMount() {
     new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 1000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: '.swiper-pagination',
       },
