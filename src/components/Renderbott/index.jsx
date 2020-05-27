@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.less'
 export default class index extends React.Component {
   render() {
     const { item } = this.props;

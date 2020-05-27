@@ -13,13 +13,12 @@ export default @connect (state => {
 class index extends React.Component {
 
   componentDidMount () {
+    const head =  document.getElementsByClassName('home_head')[0]
     window.onscroll = () => {
       if(document.documentElement.scrollTop > 100){
-        document.getElementsByClassName('home_head')[0]
-        .style.background = 'linear-gradient(red, white)';
+        head.style.background = 'linear-gradient(red, white)';
       }else{
-        document.getElementsByClassName('home_head')[0]
-        .style.background = 'none';
+        head.style.background = 'none';
       }
     }
   }
@@ -32,7 +31,6 @@ class index extends React.Component {
       this.props.history.push('/login')
     }
   }
-
   render() {
     const { data } = this.props
     return (
