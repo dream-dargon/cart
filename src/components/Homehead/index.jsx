@@ -12,13 +12,13 @@ export default @connect (state => {
 class index extends React.Component {
 
   componentDidMount () {
+    const heads = document.getElementsByClassName('home_head')[0];
     window.onscroll = () => {
       if(document.documentElement.scrollTop > 100){
-        document.getElementsByClassName('home_head')[0]
-        .style.background = 'linear-gradient(red, white)';
+        
+        heads.style.background = 'linear-gradient(red, white)';
       }else{
-        document.getElementsByClassName('home_head')[0]
-        .style.background = 'none';
+        heads.style.background = 'none';
       }
     }
   }
@@ -43,7 +43,7 @@ class index extends React.Component {
           <input placeholder='输入喜欢的宝贝名称'/>
         </div>
         <div className="home_head_right" onClick={this.tologin}>登录</div>
-    </div>
+      </div>
     )
   }
 }
