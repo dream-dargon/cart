@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import {   Login, Reg, Basic,Mine,Cart } from './assembly'
+import {   Login, Reg, Basic, Mine, Cart, Goods, } from './assembly'
 export default class Router extends React.Component {
   render () {
     return (
@@ -8,6 +8,7 @@ export default class Router extends React.Component {
         <Switch>
         <Route path="/login" component={Login} />
         <Route path="/reg" component={Reg} />
+        <Route path="/goods" component={Goods} />
         <Route path='/mine' component={Mine} />
         <Route path='/cart' component={Cart} />
           {/* <Route path="/home" component={Home} /> */}

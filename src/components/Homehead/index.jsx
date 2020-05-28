@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { Icon} from 'antd'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import { IconFont } from '@@/IconFont'
 import './style.less'
 export default @connect (state => {
@@ -36,7 +36,7 @@ class index extends React.Component {
     return (
       <div className='home_head'>
         <div className="home_head_left" >
-        <Icon type="bars" />
+        <Link to='/goods'><Icon type="bars" /></Link>
         </div>
         <div className="home_head_warp">
         <Icon type="search" id='icon_sear'/>

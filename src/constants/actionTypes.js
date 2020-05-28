@@ -5,4 +5,6 @@ export const GET_SWIPER_IMG = 'GET_SWIPER_IMG';//轮播
 export const GET_HOME_NAVS = 'GET_HOME_NAVS';//首页导航
 export const FETCH_REG = "FETCH_REG";//注册
 export const FETCH_OUT = "FETCH_OUT";//退出
-export const GET_HOME_RECOMMEND = 'GET_HOME_RECOMMEND'
+export const GET_HOME_RECOMMEND = 'GET_HOME_RECOMMEND';
+export const FETCH_GOODS_LEFT = 'FETCH_GOODS_LEFT';//分类左侧
+export const FETCH_GOODS_RIGHT = 'FETCH_GOODS_RIGHT';//分类右侧
