@@ -55,6 +55,7 @@ class index extends Component {
               <Redirect  to="/goods/detail/492"  />
             </Switch>
           </div>
+          <div className="section-second"></div>
         </section>
       </div>
     )

@@ -16,7 +16,7 @@ class idnex extends Component {
     localStorage.setItem('cid',id)
     this.props.goodsRight(id)
   }
-  componentWillReceiveProps(nextProps){  
+  componentWillReceiveProps(nextProps) {
       var id=nextProps.match.params.cid
       if ( id !== localStorage.getItem('cid') ) {
         localStorage.setItem('cid',id)
@@ -43,7 +43,7 @@ class idnex extends Component {
                                   </dl>
                                 </Link>
                                 )
-                        }) :<p></p>
+                        }) :<p style={{width:'100%',height:'0.1rem',background:'#ffffff'}}></p>
                     }
                     </div>
                     </div>
