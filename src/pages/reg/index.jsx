@@ -6,7 +6,11 @@ import { toReg } from '@/actions/reg'
 import axios from 'axios'
 import api from "@/services/api"
 import './style.less'
-
+message.config({
+  top: 150,
+  duration: 1,
+  maxCount: 1,
+});
 export default @connect (state => {
   return {}
 },{

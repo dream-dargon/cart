@@ -13,13 +13,25 @@ const Mine = Loadable(() =>
 const Basic = Loadable(() =>
     import ('@/layout/Basic'))
 const Goods = Loadable(() =>
-import ('@/pages/goods'))
+    import ('@/pages/goods'))
+const Collection = Loadable(() =>
+    import ('@/pages/collection'))
+const ChangePassword = Loadable(() =>
+    import ('@/pages/changePassword'))
+const Iphone = Loadable(() =>
+    import ('@/pages/iphone'))
+const Personal = Loadable(() =>
+    import ('@/pages/personal'))
 export {
-    Home,
-    Login,
-    Reg,
+    Home,//首页
+    Login,//登录
+    Reg,//注册
     Basic,
-    Mine,
-    Cart,
-    Goods,
+    Mine,//我的
+    Cart,//购物车
+    Goods,//分类
+    Collection,//收藏
+    ChangePassword,//修改密码
+    Iphone,//绑定手机
+    Personal,//个人资料
 }

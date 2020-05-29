@@ -3,6 +3,7 @@ import Header from '@@/Header'
 import { connect } from 'react-redux'
 import { userinfo } from '@/actions/mine'
 import { outinfo } from '@/actions/login'
+import { Link } from 'react-router-dom'
 import imgs from '@/assets/mine.png'
 import { IconFont } from '@@/IconFont'
 import './style.less'
@@ -92,7 +93,9 @@ class index extends React.Component {
           <ul>
             <li>个人资料</li>
             <li>
-              <IconFont className="icons" type="icon-iconfontxiangxia1copy19" />
+              <Link to='/Personal'>
+                <IconFont className="icons" type="icon-iconfontxiangxia1copy19" />
+              </Link>
             </li>
           </ul>
           <ul>
@@ -104,19 +107,28 @@ class index extends React.Component {
           <ul>
             <li>绑定手机</li>
             <li>
-              <IconFont className="icons" type="icon-iconfontxiangxia1copy19" />
+              <Link to='/iphone'>
+                <IconFont className="icons" type="icon-iconfontxiangxia1copy19" />
+              </Link>
             </li>
           </ul>
           <ul>
             <li>修改密码</li>
             <li>
+              <Link to='/changePassword'>
               <IconFont className="icons" type="icon-iconfontxiangxia1copy19" />
+              </Link>
             </li>
           </ul>
           <ul>
             <li>我的收藏</li>
             <li>
-              <IconFont className="icons" type="icon-iconfontxiangxia1copy19" />
+              <Link to='/collection'>
+                <IconFont 
+                className="icons" 
+                type="icon-iconfontxiangxia1copy19" 
+                />
+              </Link> 
             </li>
           </ul>
         </div>
