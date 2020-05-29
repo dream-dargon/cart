@@ -1,11 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import {   Login, Reg, Basic,Mine,Cart } from './assembly'
+import {   Login, Reg, Basic, Mine, Cart, Search } from './assembly'
 export default class Router extends React.Component {
   render () {
     return (
       <BrowserRouter>
         <Switch>
+        <Route path="/searchGoods" component={Search} />
         <Route path="/login" component={Login} />
         <Route path="/reg" component={Reg} />
         <Route path='/mine' component={Mine} />

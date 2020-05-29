@@ -17,7 +17,10 @@ export default class index extends React.Component {
         {
           arr.map((v, i) => {
             return  <dl key={v.gid}>
-              <dt><img src={v.image} alt='' /></dt>
+              <dt>
+              <p>火爆开售</p>
+              <img src={v.image} alt='' />
+              </dt>
               <dd>{v.title}</dd>
             </dl>
           })

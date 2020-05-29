@@ -1,8 +1,12 @@
 import login from "@/reducer/login"
 import home from "@/reducer/home"
 import reg from "@/reducer/reg"
+import mine from "@/reducer/mine"
+import Search from "@/reducer/search"
 export {
-    login,
-    home,
     reg,
+    home,
+    mine,
+    login,
+    Search,
 }

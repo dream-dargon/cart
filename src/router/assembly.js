@@ -1,22 +1,25 @@
 import Loadable from '@@/Loadable'
 
 const Home = Loadable(() =>
-    import ('@/pages/home'))
+  import('@/pages/home'))
 const Login = Loadable(() =>
-    import ('@/pages/login'))
+  import('@/pages/login'))
 const Reg = Loadable(() =>
-    import ('@/pages/reg'))
+  import('@/pages/reg'))
 const Cart = Loadable(() =>
-    import ('@/pages/cart'))
+  import('@/pages/cart'))
 const Mine = Loadable(() =>
-    import ('@/pages/mine'))
+  import('@/pages/mine'))
 const Basic = Loadable(() =>
-    import ('@/layout/Basic'))
+  import('@/layout/Basic'))
+const Search = Loadable(() =>
+  import('@/pages/search'))
 export {
-    Home,
-    Login,
-    Reg,
-    Basic,
-    Mine,
-    Cart
+  Home,
+  Login,
+  Reg,
+  Basic,
+  Mine,
+  Cart,
+  Search
 }

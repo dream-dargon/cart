@@ -1,7 +1,8 @@
 import React from 'react';
-import { Icon } from 'antd'
 import { connect } from 'react-redux'
+import { Icon} from 'antd'
 import { withRouter } from 'react-router-dom'
+import { IconFont } from '@@/IconFont'
 import './style.less'
 export default @connect (state => {
   return {
@@ -32,18 +33,25 @@ class index extends React.Component {
     }
   }
 
+  changeSearch = () => {
+    this.props.history.push('/searchGoods');//跳转搜索页
+  }
+
   render() {
+    const { data } = this.props
     return (
       <div className='home_head'>
         <div className="home_head_left" >
         <Icon type="bars" />
         </div>
         <div className="home_head_warp">
-        <Icon type="search" id='icon_sear'/>
-          <input placeholder='输入喜欢的宝贝名称'/>
+          <Icon type="search" id='icon_sear'/>
+          <input placeholder='输入喜欢的宝贝名称' onClick={this.changeSearch}/>
         </div>
-        <div className="home_head_right" onClick={this.tologin}>登录</div>
-      </div>
+        <div className="home_head_right" onClick={this.tologin}>
+          {data ? <IconFont type="icon-wode1" /> : '登录'}
+        </div>
+    </div>
     )
   }
 }
