@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import Seventoprig from '@@/Seventoprig'
 export default class index extends React.Component {
   getDatas = () => {
@@ -19,10 +20,11 @@ export default class index extends React.Component {
         {
           item.map((v, i) => {
             return i === 0 ? <div className='goods_top_left' key={v.gid}>
-            <dl>
+           <dl> <Link to={`/details/${v.gid}`}>
               <dt><img src={v.image} alt='' /></dt>
-              <dd>{v.title}</dd>
-            </dl>
+              <dd>{v.title}</dd> </Link>
+              </dl>
+             
           </div> : null
           })
         }

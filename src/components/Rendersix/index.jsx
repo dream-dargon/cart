@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import Renderbott from '@@/Renderbott'
 import './style.less'
 export default class index extends React.Component {
@@ -16,9 +17,9 @@ export default class index extends React.Component {
       <div className='goods_top_left'>
         {
           arr.map((v, i) => {
-            return  <dl key={v.gid}>
+            return   <dl key={v.gid}><Link to={`/details/${v.gid}`}>
               <dt><img src={v.image} alt='' /></dt>
-              <dd>{v.title}</dd>
+              <dd>{v.title}</dd></Link>
             </dl>
           })
         }

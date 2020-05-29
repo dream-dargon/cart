@@ -12,11 +12,14 @@ const Mine = Loadable(() =>
     import ('@/pages/mine'))
 const Basic = Loadable(() =>
     import ('@/layout/Basic'))
+const Details = Loadable(() =>
+    import ('@/pages/details'))
 export {
     Home,
     Login,
     Reg,
     Basic,
     Mine,
-    Cart
+    Cart,
+    Details
 }
