@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
-import { userinfo } from '@/actions/mine'
 import { updateUser } from '@/actions/personal'
 import imgs from '@/assets/zuo.png'
 import img from '@/assets/mine.png'
@@ -13,7 +12,6 @@ export default @connect( state => {
     data:state.mine.data,
   }
 },{
-  userinfo,
   updateUser
 })
 class index extends Component {

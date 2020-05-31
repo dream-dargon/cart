@@ -16,11 +16,11 @@ export default (state = initialState, { type, payload }) => {
 					message.info(payload.data)
 					return false
 			} else {
-					window.history.back()//路由后退一步
+				window.history.back()//路由后退一步
 			}
-			localStorage.setItem("uid",payload.data.uid)
 			return {...state, data: payload.data }
 		case FETCH_OUT: 
+		window.location.href="/login"
 		if ( payload.code === 200 ) {
 			window.location.href="/login"
 		}

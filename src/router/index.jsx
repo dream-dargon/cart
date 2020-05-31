@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, } from 'react-router-dom'
 import { 
   Login, Reg, 
   Basic, Mine, 
@@ -7,7 +7,8 @@ import {
   Collection, Iphone,
   ChangePassword, 
   Personal,
-  
+  Address,
+  NewAddress,
 } from './assembly'
 export default class Router extends React.Component {
   render () {
@@ -21,6 +22,8 @@ export default class Router extends React.Component {
         <Route path="/goods" component={Goods} />
         <Route path="/iphone" component={Iphone} />
         <Route path="/personal" component={Personal} />
+        <Route path="/address" component={Address} />
+        <Route path="/newAddress" component={NewAddress} />
         <Route path='/mine' component={Mine} />
         <Route path='/cart' component={Cart} />
           {/* <Route path="/home" component={Home} /> */}

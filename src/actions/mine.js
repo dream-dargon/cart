@@ -4,5 +4,5 @@ import { get } from '@/utils/request'
 
 export const userinfo = (payload) => ({
   type: FETCH_USERINFO,
-  payload: get(`/aps${api.userinfo}`)
+  payload: get(`/aps${api.userinfo}&uid=`+payload)
 })

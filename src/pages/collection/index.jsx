@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import InfiniteScroll from 'react-infinite-scroller'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import Header from '@@/Header'
 import { colecdata, colecDeldata } from '@/actions/collection'
 import './style.less'
-export default @connect( state => {
+export default @connect( ({collection,login}) => {
   return {
-    collectionData:state.collection.collectionData,
-    pagenum:state.collection.pagenum,
-    page:state.collection.page,
+    collectionData:collection.collectionData,
+    pagenum:collection.pagenum,
+    page:collection.page,
+    loginData:login.data
   }
 },{
   colecdata,
@@ -22,12 +24,11 @@ class index extends Component {
     this.loadFunc()
   }
   loadFunc = () => {
-   let { pagenum, collectionData, page} = this.props
-    const uid = localStorage.getItem('uid')
+   let { pagenum, collectionData, page, loginData} = this.props
     if ( pagenum && collectionData.length >= pagenum) {
       return false
     } else {
-      this.props.colecdata(uid,++page)
+      this.props.colecdata(loginData.uid,++page)
     }
   }
   //删除
@@ -44,12 +45,12 @@ class index extends Component {
   }
   //点击确认
   appear = () => {
+    const { loginData } = this.props
     this.setState({
       show:!this.state.show
     })
-    const uid = localStorage.getItem('uid')
     const fid = localStorage.getItem('delfid')
-    this.props.colecDeldata(uid,fid)
+    this.props.colecDeldata(loginData.uid,fid)
   }
   render() {
     const { collectionData =[] } = this.props
@@ -66,14 +67,6 @@ class index extends Component {
         >
         <div className="collection-item">
         {
-          /*
-          cid: "504"
-          fid: "1933"
-          gid: "126829706"
-          image: "//vueshop.glbuys.com/uploadfiles/1574250047.png"
-          price: 4999
-          title: "Apple/苹果 iPhone 8 Plus"
-          */
          collectionData.length !==0 ? collectionData.map(v => {
             return (
               <dl key={v.gid}>
@@ -82,7 +75,7 @@ class index extends Component {
                   <p className="title">{v.title}</p>
                   <p className="price">￥{v.price}</p>
                   <div className="btn">
-                  <p className="buy">购买</p>
+                  <p className="buy"><Link to={`/details/${v.gid}`}>购买</Link></p>
                   <p className="del" onClick={() => this.del(v.fid)}>删除</p>
                   </div>
                 </dd>

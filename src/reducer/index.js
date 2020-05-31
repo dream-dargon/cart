@@ -7,6 +7,7 @@ import changePassword from "@/reducer/changePassword"
 import iphone from "@/reducer/iphone"
 import personal from "@/reducer/personal"
 import collection from "@/reducer/collection"
+import address from "@/reducer/address"
 export {
     reg,
     home,
@@ -17,4 +18,5 @@ export {
     changePassword,
     personal,
     collection,
+    address,
 }

@@ -25,7 +25,7 @@ class index extends React.Component {
     //调用获取用户 信息函数
     const { Logindata } = this.props
     if ( Logindata ) {
-      this.props.userinfo()
+      this.props.userinfo(Logindata.uid)
     }
   }
   //退出或者登录
@@ -101,7 +101,9 @@ class index extends React.Component {
           <ul>
             <li>地址管理</li>
             <li>
-              <IconFont className="icons" type="icon-iconfontxiangxia1copy19" />
+              <Link to='/address'>
+                <IconFont className="icons" type="icon-iconfontxiangxia1copy19" />
+              </Link>
             </li>
           </ul>
           <ul>

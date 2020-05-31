@@ -12,4 +12,5 @@ export const FETCH_PASSWORD = 'FETCH_PASSWORD';//修改密码
 export const FETCH_IPHONE = 'FETCH_IPHONE';//绑定手机号
 export const FETCH_UNDATE_USER = 'FETCH_UNDATE_USER';//图片上传
 export const FETCH_MINE_COLLECTION = 'FETCH_MINE_COLLECTION';//收藏
-export const FETCH_MINE_DELETE = 'FETCH_MINE_DELETE';//收藏收藏
+export const FETCH_MINE_DELETE = 'FETCH_MINE_DELETE';//删除收藏
+export const FETCH_ADDRESS = 'FETCH_ADDRESS';//

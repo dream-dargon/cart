@@ -22,6 +22,10 @@ const Iphone = Loadable(() =>
     import ('@/pages/iphone'))
 const Personal = Loadable(() =>
     import ('@/pages/personal'))
+const Address = Loadable(() =>
+import ('@/pages/address'))
+const NewAddress = Loadable(() =>
+import ('@/pages/newAddress'))
 export {
     Home,//首页
     Login,//登录
@@ -34,4 +38,6 @@ export {
     ChangePassword,//修改密码
     Iphone,//绑定手机
     Personal,//个人资料
+    Address,//地址管理
+    NewAddress,//地址添加
 }
