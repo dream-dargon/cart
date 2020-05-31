@@ -1,4 +1,5 @@
 export default {
+<<<<<<< HEAD
     recommend: '/api/home/index/recom?token=1ec949a15fb709370f',
     login: '/api/home/user/pwdlogin?token=1ec949a15fb709370f',//登录
     swiperImgs: '/api/home/index/slide?token=1ec949a15fb709370f',//轮播
@@ -18,4 +19,15 @@ export default {
     picture:'/userfiles/head/',//返回图片接口
     updateInfo:'/api/user/myinfo/updateuser?token=1ec949a15fb709370f',//修改用户
     userdel:'/api/user/fav/del?token=1ec949a15fb709370f',//删除收藏
+=======
+    login: '/api/home/user/pwdlogin?token=1ec949a15fb709370f',
+    swiperImgs: '/api/home/index/slide?token=1ec949a15fb709370f',
+    fiveNavs: '/api/home/index/nav?token=1ec949a15fb709370f',
+    reg: '/api/home/user/reg?token=1ec949a15fb709370f',
+    code: '/api/vcode/chkcode?token=1ec949a15fb709370f',
+    recomGoods: '/api/home/index/goodsLevel?token=1ec949a15fb709370f', //首页标题推荐
+    detailsOne: 'api/home/goods/info?type=details&token=1ec949a15fb709370f',
+    detailsThrpage: 'api/home/reviews/index?token=1ec949a15fb709370f', //第一页评价
+    detailsThrpages: 'api/home/reviews/index?token=1ec949a15fb709370f&pageFrom=goods_classify', //所有评价
+>>>>>>> origin/fff
 }
