@@ -1,5 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
 import { BrowserRouter, Switch, Route, } from 'react-router-dom'
+=======
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+<<<<<<< HEAD
+>>>>>>> bd98e4a22773f5b8d5c6fdb3c10d196040268a06
 import { 
   Login, Reg, 
   Basic, Mine, 
@@ -10,6 +15,9 @@ import {
   Address,
   NewAddress,
 } from './assembly'
+=======
+import {   Login, Reg, Basic,Mine,Cart,Details } from './assembly'
+>>>>>>> origin/fff
 export default class Router extends React.Component {
   render () {
     return (
@@ -26,7 +34,7 @@ export default class Router extends React.Component {
         <Route path="/newAddress" component={NewAddress} />
         <Route path='/mine' component={Mine} />
         <Route path='/cart' component={Cart} />
-          {/* <Route path="/home" component={Home} /> */}
+         <Route path="/details/:gid" component={Details} /> 
           <Route path="/" component={Basic} />
           {/* <Route path="/" component={App} /> */}
         </Switch>

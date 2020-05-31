@@ -1,4 +1,5 @@
 export default {
+<<<<<<< HEAD
     recommend: '/api/home/index/recom?token=1ec949a15fb709370f',
     login: '/api/home/user/pwdlogin?token=1ec949a15fb709370f',//登录
     swiperImgs: '/api/home/index/slide?token=1ec949a15fb709370f',//轮播
@@ -8,6 +9,7 @@ export default {
     userinfo: 'api/user/myinfo/userinfo?token=1ec949a15fb709370f',//用户信息
     out: 'api/home/user/safeout?token=1ec949a15fb709370f',//退出
     recomGoods: '/api/home/index/goodsLevel?token=1ec949a15fb709370f', //首页标题推荐
+<<<<<<< HEAD
     goodsLeft: '/api/home/category/menu?token=1ec949a15fb709370f',//分类左侧列表
     goodsRight: '/api/home/category/show?token=1ec949a15fb709370f',//分类右侧列表
     colection: '/api/user/fav/index?token=1ec949a15fb709370f',//获取收藏数据
@@ -18,4 +20,26 @@ export default {
     updateInfo: '/api/user/myinfo/updateuser?token=1ec949a15fb709370f',//修改用户
     userdel: '/api/user/fav/del?token=1ec949a15fb709370f',//删除收藏
     address: '/api/user/address/index?token=1ec949a15fb709370f',//获取收货地址列表
+=======
+    goodsLeft:'/api/home/category/menu?token=1ec949a15fb709370f',//分类左侧列表
+    goodsRight:'/api/home/category/show?token=1ec949a15fb709370f',//分类右侧列表
+    colection:'/api/user/fav/index?token=1ec949a15fb709370f',//获取收藏数据
+    changePassword:'/api/home/user/modpwd?token=1ec949a15fb709370f',//修改密码
+    iphone:'/api/user/myinfo/updatecellphone?token=1ec949a15fb709370f',//绑定手机号
+    headUpdate:'/api/user/myinfo/formdatahead?token=1ec949a15fb709370f',//头像上传
+    picture:'/userfiles/head/',//返回图片接口
+    updateInfo:'/api/user/myinfo/updateuser?token=1ec949a15fb709370f',//修改用户
+    userdel:'/api/user/fav/del?token=1ec949a15fb709370f',//删除收藏
+=======
+    login: '/api/home/user/pwdlogin?token=1ec949a15fb709370f',
+    swiperImgs: '/api/home/index/slide?token=1ec949a15fb709370f',
+    fiveNavs: '/api/home/index/nav?token=1ec949a15fb709370f',
+    reg: '/api/home/user/reg?token=1ec949a15fb709370f',
+    code: '/api/vcode/chkcode?token=1ec949a15fb709370f',
+    recomGoods: '/api/home/index/goodsLevel?token=1ec949a15fb709370f', //首页标题推荐
+    detailsOne: 'api/home/goods/info?type=details&token=1ec949a15fb709370f',
+    detailsThrpage: 'api/home/reviews/index?token=1ec949a15fb709370f', //第一页评价
+    detailsThrpages: 'api/home/reviews/index?token=1ec949a15fb709370f&pageFrom=goods_classify', //所有评价
+>>>>>>> origin/fff
+>>>>>>> bd98e4a22773f5b8d5c6fdb3c10d196040268a06
 }
