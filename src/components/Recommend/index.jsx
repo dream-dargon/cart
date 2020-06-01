@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { Icon } from 'antd';
 import './style.less'
 
@@ -29,6 +30,7 @@ class Recommend extends Component {
             recommends.map(v => {
               return (
                 <div className="goods-list" key={v.gid}>
+                <Link to={`/details/${v.gid}`}>
                   <dl>
                     <dt><img src={v.image} alt="" /></dt>
                     <dd>
@@ -36,6 +38,7 @@ class Recommend extends Component {
                       <p>￥{v.price}</p>
                     </dd>
                   </dl>
+                </Link>
                 </div>
               )
             })

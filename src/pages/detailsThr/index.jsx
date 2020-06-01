@@ -15,7 +15,6 @@ export default @connect(state => {
    this.props.Detailsthrpage_action(gid)
   }
   render() {
-    console.log(this.props)
     const { commentData } = this.props;
     const length = commentData.length !==0 ? commentData.length : 0
       return  <div className='detailsThr'>

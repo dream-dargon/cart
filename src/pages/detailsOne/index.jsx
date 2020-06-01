@@ -12,22 +12,23 @@ export default @connect(state => {
 })
  class index extends React.Component {
   componentDidMount() {
-    console.log(this.props)
     this.props.Detailsone(this.props.match.params.gid)
   }
   jump = () => {
     const { gid } = this.props.match.params;
-    this.props.history.push(`/details/${gid}/2`)
+    this.props.history.replace(`/details/${gid}/2`)
   }
   render() {
     const { datas } = this.props;
       return  <div className='detailsOne'>
         <div>
         {
-          <div>
-            <img src={datas.images[0]} alt=""/>
+          <div className="detail-info">
+              <img src={datas.images[0]} alt=""/>
+              <p>{datas.title}</p>
+              <p style={{color:'red'}}>￥{datas.price}</p>
+              <p className="three"><span>快递：{datas.freight}元</span><span>月销量{datas.sales}件</span></p>
          </div> 
-          
         }
         <DetailsThr/>
           <div className='morejudge'> <p onClick={() =>this.jump()}>查看更多评价</p> </div>

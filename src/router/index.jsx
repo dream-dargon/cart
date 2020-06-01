@@ -1,11 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { BrowserRouter, Switch, Route, } from 'react-router-dom'
-=======
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-<<<<<<< HEAD
->>>>>>> bd98e4a22773f5b8d5c6fdb3c10d196040268a06
-import { 
+import{
   Login, Reg, 
   Basic, Mine, 
   Cart, Goods, 
@@ -14,10 +9,8 @@ import {
   Personal,
   Address,
   NewAddress,
+  Details,
 } from './assembly'
-=======
-import {   Login, Reg, Basic,Mine,Cart,Details } from './assembly'
->>>>>>> origin/fff
 export default class Router extends React.Component {
   render () {
     return (

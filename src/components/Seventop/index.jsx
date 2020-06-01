@@ -21,20 +21,14 @@ export default class index extends React.Component {
         {
           item.map((v, i) => {
             return i === 0 ? <div className='goods_top_left' key={v.gid}>
-<<<<<<< HEAD
             <dl>
+            <Link to={`/details/${v.gid}`}>
+            <dd>{v.title}</dd>
               <dt>
               <p style={{color:'#CB385D'}}>精品打折</p>
               <img src={v.image} alt='' /></dt>
-              <dd>{v.title}</dd>
+            </Link>
             </dl>
-=======
-           <dl> <Link to={`/details/${v.gid}`}>
-              <dt><img src={v.image} alt='' /></dt>
-              <dd>{v.title}</dd> </Link>
-              </dl>
-             
->>>>>>> origin/fff
           </div> : null
           })
         }
