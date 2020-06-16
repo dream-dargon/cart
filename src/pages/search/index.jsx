@@ -9,7 +9,7 @@ const IconFont = Icon.createFromIconfontCN({
 });
 
 export default @connect(state => {
-  return {}
+  return { hot: state.Search.hotRecommend }
 },{
   getHot
 })
@@ -19,13 +19,22 @@ class Search extends Component {
     this.props.getHot();
   }
 
+  resetSearch = () =>{
+    this.props.history.push('/')
+  }
+
+  btnClick = (val) => {
+    localStorage.setItem('keys',val);
+    this.props.history.push(`/searchGoodsIndex/${val}`)
+  }
+
   render() {
-    console.log(this.props)
+    const { hot} = this.props;
     return (
       <div className="pages-search">
         <div className="searchHead">
           <div className="headReset">
-            <IconFont type="icon-quxiao" />
+            <IconFont type="icon-quxiao" onClick={this.resetSearch} />
           </div>
           <div className="headFind">
             <div className="findInput">
@@ -34,7 +43,23 @@ class Search extends Component {
             </div>
           </div>
         </div>
-        <div className="hotRecommend"></div>
+        <div className="recommendDiv">
+          <div className="hotRecommend">
+            <p>热门推荐</p>
+            <div>
+              {
+                hot.map((v, i) => {
+                  return (
+                    <button key={i} onClick={() => this.btnClick(v.title)}>
+                      {v.title}
+                    </button>
+                  )
+                })
+              }
+            </div>
+          </div>
+          
+        </div>
       </div>
     )
   }

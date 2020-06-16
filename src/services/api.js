@@ -9,10 +9,9 @@ export default {
     	localStorage.getItem('uid')+'?token=1ec949a15fb709370f',//用户信息
     out:'api/home/user/safeout?token=1ec949a15fb709370f',//退出
     recomGoods: '/api/home/index/goodsLevel?token=1ec949a15fb709370f', //首页标题推荐
-<<<<<<< HEAD
     hotSearch: '/api/home/public/hotwords?token=1ec949a15fb709370f', //热门搜索
-=======
+    searchKeyGoods: '/api/home/goods/param?kwords='+
+        localStorage.getItem('keys')+'&token=1ec949a15fb709370f',//搜索关键词
     goodsLeft:'/api/home/category/menu?token=1ec949a15fb709370f',//分类左侧列表
     goodsRight:'/api/home/category/show?token=1ec949a15fb709370f',//分类右侧列表
->>>>>>> 78b195b08a871dedc8b6aef9b6fb4558bbc51ad5
 }

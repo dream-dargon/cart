@@ -8,8 +8,10 @@ export default (state = initialState, { type, payload }) => {
   switch (type) {
 
   case SEARCH_HOT_RECOMMEND:
-    console.log(payload)
-    return { ...state, ...payload };
+    return { 
+      ...state, 
+      hotRecommend: [...payload.data] 
+    };
 
   default:
     return state
