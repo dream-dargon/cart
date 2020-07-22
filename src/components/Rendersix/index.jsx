@@ -17,9 +17,18 @@ export default class index extends React.Component {
       <div className='goods_top_left'>
         {
           arr.map((v, i) => {
+<<<<<<< HEAD
+            return  <dl key={v.gid}>
+              <dt>
+              <p>火爆开售</p>
+              <img src={v.image} alt='' />
+              </dt>
+              <dd>{v.title}</dd>
+=======
             return   <dl key={v.gid}><Link to={`/details/${v.gid}`}>
               <dt><img src={v.image} alt='' /></dt>
               <dd>{v.title}</dd></Link>
+>>>>>>> fff
             </dl>
           })
         }

@@ -1,15 +1,10 @@
 import axios from 'axios'
 import qs from 'qs'
-import { store } from '../store'
 // 添加请求拦截器
 axios.interceptors.request.use(config => {
     // const obj = qs.parse(config.data)
     // obj.token = 2222
     // config.data = qs.stringify(obj)
-    const { token } = store.getState().login
-    if (token) {
-        config.data = `&token=${token}`
-    }
     return config
 
 }, error => {
@@ -27,7 +22,7 @@ axios.interceptors.response.use(response => {
 }, error => {
     switch (error.response.status) {
         case 404:
-            window.location.href = 'https://www.baidu.com'
+            // window.location.href = 'https://www.baidu.com'
             break;
 
         default:
@@ -35,23 +30,7 @@ axios.interceptors.response.use(response => {
     }
     return Promise.reject(error);
 });
-
-
-// post
-// export function post (url, data) {
-//   return  new Promise((resolve, reject) => {
-// axios({
-//     url,
-//     method: 'POST',
-//     // 添加公共的请求头
-//     // headers: { token: '3333333333333' },
-//     headers:{'Content-Type':"application/x-www-form-urlencoded"},
-//     data: qs.stringify(data),
-//   })
-//       .then(res => resolve(res.data))
-//       .catch(err => console.log(err))
-//   })
-// }
+//post请求
 export async function post(url, data) {
     const res = await axios({
         url,

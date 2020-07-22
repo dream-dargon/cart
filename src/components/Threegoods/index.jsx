@@ -12,18 +12,23 @@ export default @connect(state => {
   getRecomm
 })
 class index extends React.Component {
+  state ={
+    colorArr:['#f73b61', '#fe6719', '#5fc600']
+  }
+
   componentDidMount() {
     this.props.getRecomm()
   }
 
   render() {
     const { recomGoods } = this.props;
+    const { colorArr } = this.state;
     return <div>
       {
         recomGoods.map((v,i) => {
           return (
             <div key={i} className='threegoods'>
-              <Recomtitle title={v.title} />
+              <Recomtitle title={v.title} colors={colorArr[i]}/>
               <Recomgoods items={v.items}/>
             </div>
           )

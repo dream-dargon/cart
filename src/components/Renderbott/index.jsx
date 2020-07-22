@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+import './style.less'
+=======
 import { Link } from 'react-router-dom'
+>>>>>>> fff
 export default class index extends React.Component {
   render() {
     const { item } = this.props;

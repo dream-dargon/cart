@@ -3,6 +3,7 @@ import Swiper from 'swiper';
 import { connect } from 'react-redux'
 import 'swiper/js/swiper.min.js'
 import 'swiper/css/swiper.min.css'
+import './style.less'
 export default @connect(state => {
   return {
     imgs : state.home.swiperImgs
@@ -10,13 +11,12 @@ export default @connect(state => {
 })
 class index extends React.Component {
   componentDidMount() {
-    new Swiper('.swiper-container',{
-      loop: true, 
+    new Swiper('.swiper-container', {
       autoplay: {
-          delay: 1000,
-          stopOnLastSlide: false,
-          disableOnInteraction: false,
-          },
+        delay: 1000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+      },
       pagination: {
           el: '.swiper-pagination',
           clickable :true,
@@ -31,7 +31,7 @@ class index extends React.Component {
         <div className="swiper-wrapper">
           {
             imgs.map((v,i)=>{
-              return <div className="swiper-slide" key={i}><img src={v.image} alt=''/></div>
+              return <div className="swiper-slide" key={i}><img src={v.image} alt="" /></div>
             })
           }
         </div>

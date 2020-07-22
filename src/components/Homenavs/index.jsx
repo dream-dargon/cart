@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { getNavs } from '@/actions/home'
-
+import './style.less'
 export default @connect(state => {
   return {
     navs : state.home.fiveNavs
@@ -18,10 +19,14 @@ class index extends React.Component {
     return <div className='home_navs'>
       {
         navs.map(v => {
-          return (<dl key={v.cid}>
-            <dt><img src={v.image} alt='' /></dt>
-            <dd>{v.title}</dd>
-          </dl>)
+          return (
+           <Link  to={`/goods/detail/${v.cid}`} key={v.cid}>
+            <dl>
+              <dt><img src={v.image} alt='' /></dt>
+              <dd>{v.title}</dd>
+            </dl>
+          </Link>
+          )
         })
      }
     </div>;
