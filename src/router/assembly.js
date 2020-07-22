@@ -11,6 +11,7 @@ const Cart = Loadable(() =>
 const Mine = Loadable(() =>
   import('@/pages/mine'))
 const Basic = Loadable(() =>
+<<<<<<< HEAD
   import('@/layout/Basic'))
 const Search = Loadable(() =>
   import('@/pages/search'))
@@ -18,6 +19,11 @@ const SearchGoods = Loadable(() =>
   import ('@/pages/search_goods'))
 const Goods = Loadable(() =>
   import ('@/pages/goods'))
+=======
+    import ('@/layout/Basic'))
+const Details = Loadable(() =>
+    import ('@/pages/details'))
+>>>>>>> fff
 export {
     Home,
     Login,
@@ -25,7 +31,11 @@ export {
     Basic,
     Mine,
     Cart,
+<<<<<<< HEAD
     Search,
     SearchGoods,
     Goods,
+=======
+    Details
+>>>>>>> fff
 }
